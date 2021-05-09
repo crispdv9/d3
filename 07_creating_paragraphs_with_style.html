@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>D3: Creating paragraphs dynamically from data</title>
+		<title>D3: Setting the style of paragraphs</title>
 		<script type="text/javascript" src="../d3.js"></script>
 	</head>
 	<body>
@@ -14,7 +14,10 @@
 				.data(dataset)
 				.enter()
 				.append("p")
-				.text("New paragraph!");
+				.text(function(d) {
+					return "I can count up to " + d;
+				})
+				.style("color", "red");
 
 		</script>
 	</body>
